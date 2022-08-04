@@ -34,3 +34,36 @@ head(penguins)
 ## last 6 lines?
 tail(penguins)
 ```
+
+```{r}
+##skim(penguins)
+```
+
+```{r}
+##GGally::ggpairs(penguins)
+```
+
+## Jitterplot
+
+Flipper length by species
+
+```{r}
+#| fig.cap = "my awesome figure caption"
+ggplot(data = penguins, mapping = aes(x = species,y = flipper_length_mm)) +
+  geom_jitter(width = 0.2,
+              alpha = 0.5,
+              height = 0,
+              aes(color = species)) + ##saying what geometry we want aka jitter, then adding some modifications like the spread of the points (width) and transparancy (alpha)
+  geom_boxplot(fill = NA) +
+  theme_light() + ##change background from grey to white
+  scale_color_manual(values = c("darkorchid4", "cyan4", "goldenrod")) +
+  labs(x = "Species", 
+       y = "Flipper Length (mm)",
+       title = "Penguin Species vs Flipper Length (mm)")
+```
+
+```{r}
+ggplot(data = penguins, mapping = aes(x = bill_length_mm)) +
+  geom_histogram(aes(fill = species), color = "magenta") +
+  facet_wrap(~species, ncol = 1)
+```
