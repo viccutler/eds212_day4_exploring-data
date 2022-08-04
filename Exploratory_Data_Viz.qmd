@@ -1,0 +1,36 @@
+---
+title: "Day 4 - Exploring Data"
+author: "Victoria Cutler"
+format: html
+editor: visual
+---
+
+```{r}
+#| warning: false
+#| echo: false ## if there are outputs, they will show, but the code will not
+
+library(tidyverse)
+library(palmerpenguins)
+library(GGally) ## install.packages("GGally")
+library(skimr)
+```
+
+## Exploratory Data Viz
+
+Check out your data a bit (may normally just run these in the console):
+
+```{r}
+#| include: false ## nothing will show up from this code chunk now in my rendered doc, neither the outputs or code
+
+## Tell me the column names:
+names(penguins)
+
+## What are the dimensions?
+dim(penguins)
+
+## Can you show me the first 6 lines?
+head(penguins)
+
+## last 6 lines?
+tail(penguins)
+```
