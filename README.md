@@ -1,4 +1,4 @@
-# EDS Day 4 Exploring Data
+# EDS Day 4 - Exploring Data
 
 
 ### Exploring data - introduction
